@@ -1,0 +1,25 @@
+int tempo = 100;
+
+void setup() {
+  for(int pino = 2; pino <= 6; pino++) {
+    pinMode(pino, OUTPUT);
+  }
+}
+
+void loop() {
+  // Sequência de ida
+  for(int pino = 2; pino <= 6; pino++) {
+    digitalWrite(pino, HIGH);
+    delay(tempo);
+    digitalWrite(pino, LOW);
+    delay(tempo);
+  }
+  
+  // Sequência de volta
+  for(int pino = 5; pino >= 2; pino--) {
+    digitalWrite(pino, HIGH);
+    delay(tempo);
+    digitalWrite(pino, LOW);
+    delay(tempo);
+  }
+}
